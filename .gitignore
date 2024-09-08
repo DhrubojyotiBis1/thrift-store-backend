@@ -124,6 +124,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.DS_Store
 env/
 venv/
 ENV/
@@ -153,6 +154,12 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# migration files
+*/migrations/*
+
+# Don't ignore the __init__.py file in migrations folder
+!*/migrations/__init__.py
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
