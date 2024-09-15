@@ -56,7 +56,7 @@ class GamerManagers(BaseUserManager):
 class Gamers(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True,max_length=255)
     first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50,blank=True)
+    last_name = models.CharField(max_length=50,blank=True, null=True)
     photo_url = models.CharField(max_length=150,blank=True)
     phone = models.CharField(unique=True,max_length=20,blank=True)
     team = models.ForeignKey(Teams, on_delete=models.SET_NULL, null=True)
